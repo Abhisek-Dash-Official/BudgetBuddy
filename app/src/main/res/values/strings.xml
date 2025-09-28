@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BudgetBuddy</string>
+    <string name="brand_name"><u>BudgetBuddy</u></string>
+    <string name="tagline">Budget Buddy: Track, save, thrive</string>
+    <string name="saveSpendingBtnText">Save my Spending</string>
+    <string name="spendingPageTitle">My Spendings</string>
+    <string name="monthlySpendingHeading"><u>This Month</u></string>
+</resources>

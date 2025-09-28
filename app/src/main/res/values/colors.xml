@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg">#001E1E</color>
+    <color name="lightBG">#6F0C4E4E</color>
+    <color name="inputBgTint">#11FF00</color>
+    <color name="inputTextColor">#FFFFFFFF</color>
+    <color name="inputTextHintColor">#DBDBDBFF</color>
+    <color name="spendingPageHeadingColor">#9EFF03</color>
+</resources>

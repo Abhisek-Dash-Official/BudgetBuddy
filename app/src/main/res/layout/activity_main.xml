@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="334dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/tagline"
+        android:textAlignment="center"
+        android:textColor="#B8FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/moveToHome"
+        android:layout_width="300dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="20dp"
+        android:onClick="moveToSpendingActivity"
+        app:cardBackgroundColor="@color/lightBG"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:cardCornerRadius="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/applogo" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="182dp"
+                android:layout_height="39dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/brand_name"
+                android:textAlignment="center"
+                android:textColor="#37FF00"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cardView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        app:cardBackgroundColor="@color/lightBG"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moveToHome">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/spendTitle"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="235dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="36dp"
+                android:backgroundTint="@color/inputBgTint"
+                android:ems="10"
+                android:hint="What did I spend on?"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textColor="@color/inputTextColor"
+                android:textColorHint="@color/inputTextHintColor"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/saveSpendingBtn"
+                android:layout_width="201dp"
+                android:layout_height="65dp"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="#6F7BC762"
+                android:onClick="saveSpending"
+                android:text="@string/saveSpendingBtnText"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.454"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:text="Price Spent:"
+                android:textColor="#36FF00"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spendTitle"
+                app:layout_constraintVertical_bias="0.86" />
+
+            <EditText
+                android:id="@+id/spendPrice"
+                android:layout_width="169dp"
+                android:layout_height="54dp"
+                android:backgroundTint="@color/inputBgTint"
+                android:ems="10"
+                android:hint="00000"
+                android:inputType="numberDecimal"
+                android:textColor="@color/inputTextColor"
+                android:textColorHint="@color/inputTextHintColor"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/saveSpendingBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.343"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                app:layout_constraintVertical_bias="0.246" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="Only"
+                android:textColor="@color/inputTextColor"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/spendPrice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/spendPrice"
+                app:layout_constraintTop_toTopOf="@+id/spendPrice" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹"
+                android:textColor="@color/inputBgTint"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@+id/spendPrice"
+                app:layout_constraintEnd_toStartOf="@+id/spendPrice"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/spendPrice" />
+
+            <!--            <Button-->
+            <!--                android:id="@+id/saveBtn"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="52dp"-->
+            <!--                android:background="#A5E06E"-->
+            <!--                android:onClick="saveSpending"-->
+            <!--                android:text="Save my Spending"-->
+            <!--                android:textAlignment="center"-->
+            <!--                android:textSize="18sp"-->
+            <!--                app:cornerRadius="30dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout></ScrollView>
