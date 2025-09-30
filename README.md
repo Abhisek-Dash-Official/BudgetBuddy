@@ -1,4 +1,4 @@
-# BudgetBuddy
+# BudgetBuddy (1st Year REPO)
 
 ![Kotlin](https://img.shields.io/badge/Kotlin-1.9-blue?logo=kotlin)  
 ![Android](https://img.shields.io/badge/Android-14-green?logo=android)  
